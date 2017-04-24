@@ -44,5 +44,6 @@ void tcp_server_run(struct tcp_server *tcp_server, char *ip, int port) {
 }
 
 void tcp_server_free(struct tcp_server *server) {
+
     free(server);
 }
