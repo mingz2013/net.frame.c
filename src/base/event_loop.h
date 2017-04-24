@@ -5,4 +5,14 @@
 #ifndef SERVER_BASE_C_EVENT_LOOP_H
 #define SERVER_BASE_C_EVENT_LOOP_H
 
+
+struct EventLoop {
+
+};
+
+static struct EventLoop *event_loop_new();
+
+
+
+
 #endif //SERVER_BASE_C_EVENT_LOOP_H
