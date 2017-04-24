@@ -15,16 +15,12 @@ struct echo_server;
 void on_message(struct echo_server *server, struct tcp_connection *connection, char *message);
 
 
-void echo_server_run(struct echo_server *server, char *ip, int port);
-
 void echo_server_free(struct echo_server *server);
 
-struct echo_server *echo_server_new();
+struct echo_server *echo_server_new(char *ip, int port);
 
 struct echo_server {
     struct tcp_server *tcp_server;
-
-    void (*echo_server_run)(struct echo_server *server, char *ip, int port);
 
     void (*echo_server_free)(struct echo_server *server);
 

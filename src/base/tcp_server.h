@@ -21,19 +21,17 @@ void add_one_connection(struct tcp_connection *connection);
 void remove_one_connection(struct tcp_connection *connection);
 
 
-void tcp_server_run(struct tcp_server *tcp_server, char *ip, int port);
-
-
-
-static struct tcp_server *tcp_server_new();
+static struct tcp_server *tcp_server_new(char *ip, int port);
 
 void tcp_server_free(struct tcp_server *server);
 
 struct tcp_server {
 
+    char *ip;
+    int port;
+
     struct tcp_connection *connections[];
 
-    void (*tcp_server_run)(struct tcp_server *server, char *ip, int port);
 
     void (*tcp_server_free)(struct tcp_server *server);
 

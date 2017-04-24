@@ -26,8 +26,11 @@ void remove_one_connection(struct tcp_connection *connection) {
 }
 
 
-struct tcp_server *tcp_server_new() {
+struct tcp_server *tcp_server_new(char *ip, int port) {
     struct tcp_server *server = malloc(sizeof(*server));
+
+    server->ip = ip;
+    server->port = port;
 
     server->on_connection = &on_connection;
     server->on_message = &on_message;
@@ -39,9 +42,6 @@ struct tcp_server *tcp_server_new() {
 }
 
 
-void tcp_server_run(struct tcp_server *tcp_server, char *ip, int port) {
-
-}
 
 void tcp_server_free(struct tcp_server *server) {
 

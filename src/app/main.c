@@ -12,9 +12,7 @@ int main(int args, char **argv) {
 
     struct reactor *r = reactor_new();
 
-    struct echo_server *server = echo_server_new();
-
-    server->echo_server_run(server, "127.0.0.1", 5000);
+    struct echo_server *server = echo_server_new("127.0.0.1", 5000);
 
     r->reactor_run((struct tcp_server *) server);
 
