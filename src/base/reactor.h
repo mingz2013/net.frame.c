@@ -5,17 +5,20 @@
 #ifndef SERVER_BASE_C_REACTOR_H
 #define SERVER_BASE_C_REACTOR_H
 
-struct Reactor {
+struct reactor {
+    void (*reactor_run)(struct tcp_server *server);
 
+    void (*reactor_free)(struct reactor *r);
 };
 
-static struct Reactor *reactor_new();
+struct reactor *reactor_new();
 
-static void add_accepter();
+void add_accepter();
 
-static void add_connector();
+void add_connector();
 
-static void run(char *ip, int port);
+void reactor_run(struct tcp_server *server);
 
+void reactor_free(struct reactor *r);
 
 #endif //SERVER_BASE_C_REACTOR_H

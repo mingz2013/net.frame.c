@@ -7,6 +7,7 @@
 
 #include "base/tcp_server.h"
 #include "base/tcp_connection.h"
+#include "base/reactor.h"
 
 struct echo_server;
 
