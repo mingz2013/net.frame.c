@@ -16,13 +16,18 @@ void on_message(struct tcp_server *server, struct tcp_connection *connection, ch
 void on_close(struct tcp_server *server, struct tcp_connection *connection);
 
 
+void add_one_connection(struct tcp_connection *connection);
+
+void remove_one_connection(struct tcp_connection *connection);
+
 
 void tcp_server_run(struct tcp_server *tcp_server, char *ip, int port);
 
 
-void tcp_server_free(struct tcp_server *server);
 
 static struct tcp_server *tcp_server_new();
+
+void tcp_server_free(struct tcp_server *server);
 
 struct tcp_server {
 
@@ -31,6 +36,10 @@ struct tcp_server {
     void (*tcp_server_run)(struct tcp_server *server, char *ip, int port);
 
     void (*tcp_server_free)(struct tcp_server *server);
+
+    void (*add_one_connection)(struct tcp_connection *connection);
+
+    void (*remove_one_connection)(struct tcp_connection *connection);
 
     void (*on_connection)(struct tcp_server *server, struct tcp_connection *connection);
 
