@@ -21,6 +21,9 @@ void on_close() {
 struct echo_server *echo_server_new() {
 
     struct echo_server *server = malloc(sizeof(*server));
+    server->echo_server_run = &echo_server_run;
+    server->echo_server_free = &echo_server_free;
+
 
     server->tcp_server = tcp_server_new();
     server->tcp_server->on_connection_cb = &on_connection;
@@ -32,12 +35,12 @@ struct echo_server *echo_server_new() {
 
 
 void echo_server_run(struct echo_server *server, char *ip, int port) {
-    tcp_server_run(server->tcp_server, ip, port);
+    server->tcp_server->tcp_server_run(server->tcp_server, ip, port);
 }
 
 void echo_server_free(struct echo_server *server) {
 
-    tcp_server_free(server->tcp_server);
+    server->tcp_server->tcp_server_free();
 
     free(server);
 }

@@ -11,9 +11,9 @@ int main(int args, char **argv) {
 
     struct echo_server *server = echo_server_new();
 
-    echo_server_run(server, "127.0.0.1", 5000);
+    server->echo_server_run(server, "127.0.0.1", 5000);
 
-    echo_server_free(server);
+    server->echo_server_free(server);
 
     return 0;
 }
