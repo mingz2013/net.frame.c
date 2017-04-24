@@ -21,8 +21,11 @@ struct Accepter {
 static struct Accepter *accepter_new(struct Accepter_Config *config);
 
 
+static void accepter_listen();
 
+static void accepter_bind();
 
+static void accepter_accept();
 
 
 
