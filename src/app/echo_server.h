@@ -5,7 +5,10 @@
 #ifndef SERVER_BASE_C_ECHO_SERVER_H
 #define SERVER_BASE_C_ECHO_SERVER_H
 
+#include "base/tcp_server.h"
+
 struct echo_server {
+    struct tcp_server *tcp_server;
 
 };
 

@@ -6,6 +6,7 @@
 
 struct tcp_server *tcp_server_new() {
     struct tcp_server *server = malloc(sizeof(*server));
+    return server;
 }
 
 
