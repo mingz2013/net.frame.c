@@ -17,6 +17,8 @@ void tcp_connection_send(struct tcp_connection *connection, char *message);
 
 
 struct tcp_connection {
+
+
     void (*tcp_connection_free)(struct tcp_connection *connection);
 
     void (*tcp_connection_send)(struct tcp_connection *connection, char *message);

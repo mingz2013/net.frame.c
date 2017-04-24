@@ -1,6 +1,7 @@
 //
 // Created by zhaojm on 24/04/2017.
 //
+#include "tcp_connection.h"
 
 struct tcp_connection *tcp_connection_new() {
     struct tcp_connection *connection = malloc(sizeof(*connection));

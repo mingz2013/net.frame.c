@@ -2,6 +2,7 @@
 // Created by zhaojm on 24/04/2017.
 //
 
+#include "echo_server.h"
 #include "base/tcp_server.h"
 
 
