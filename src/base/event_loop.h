@@ -13,6 +13,7 @@ struct EventLoop {
 static struct EventLoop *event_loop_new();
 
 
+static void run();
 
 
 #endif //SERVER_BASE_C_EVENT_LOOP_H
