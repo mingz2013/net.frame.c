@@ -5,4 +5,12 @@
 #ifndef SERVER_BASE_C_DEFAULT_SELECTOR_H
 #define SERVER_BASE_C_DEFAULT_SELECTOR_H
 
+struct selector {
+
+};
+
+
+static struct selector *selector_new();
+
+
 #endif //SERVER_BASE_C_DEFAULT_SELECTOR_H
