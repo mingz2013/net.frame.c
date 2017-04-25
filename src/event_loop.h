@@ -6,14 +6,16 @@
 #define SERVER_BASE_C_EVENT_LOOP_H
 
 
-struct EventLoop {
+struct event_loop {
 
 };
 
-static struct EventLoop *event_loop_new();
+static struct event_loop *event_loop_new();
+
+void event_loop_free();
 
 
-static void run();
+void event_loop_run();
 
 
 #endif //SERVER_BASE_C_EVENT_LOOP_H

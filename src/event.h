@@ -11,5 +11,7 @@ struct event {
 
 static struct event *event_new();
 
+void event_free();
+
 
 #endif //SERVER_BASE_C_EVENT_H
