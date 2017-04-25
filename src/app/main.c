@@ -14,7 +14,7 @@ int main(int args, char **argv) {
 
     struct echo_server *server = echo_server_new("127.0.0.1", 5000);
 
-    r->reactor_run((struct tcp_server *) server);
+    r->reactor_run(r, (struct tcp_server *) server);
 
     server->echo_server_free(server);
 

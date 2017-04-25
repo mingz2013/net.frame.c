@@ -6,7 +6,7 @@
 #define SERVER_BASE_C_REACTOR_H
 
 struct reactor {
-    void (*reactor_run)(struct tcp_server *server);
+    void (*reactor_run)(struct reactor *r, struct tcp_server *server);
 
     void (*reactor_free)(struct reactor *r);
 };
@@ -17,7 +17,7 @@ void add_accepter();
 
 void add_connector();
 
-void reactor_run(struct tcp_server *server);
+void reactor_run(struct reactor *r, struct tcp_server *server);
 
 void reactor_free(struct reactor *r);
 
