@@ -6,7 +6,6 @@
 #include "base/tcp_server.h"
 
 
-
 void on_message(struct echo_server *server, struct tcp_connection *connection, char *message) {
     connection->tcp_connection_send(connection, message);
 }
