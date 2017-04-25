@@ -13,7 +13,7 @@ struct selector {
 static struct selector *selector_new();
 
 
-static struct selector *default_selector();
+static struct selector *selector_default();
 
 void add_event();
 
