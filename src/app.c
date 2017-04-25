@@ -3,8 +3,8 @@
 //
 
 #include "app.h"
-#include "base/reactor.h"
-#include "base/servers/echo_server.h"
+#include "reactor.h"
+#include "echo_server.h"
 
 struct app *app_new() {
     struct app *a = malloc(sizeof(*a));
