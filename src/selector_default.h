@@ -1,9 +1,9 @@
 //
-// Created by zhaojm on 24/04/2017.
+// Created by zhaojm on 25/04/2017.
 //
 
-#ifndef SERVER_BASE_C_DEFAULT_SELECTOR_H
-#define SERVER_BASE_C_DEFAULT_SELECTOR_H
+#ifndef SERVER_BASE_C_SELECTOR_DEFAULT_H
+#define SERVER_BASE_C_SELECTOR_DEFAULT_H
 
 struct selector {
 
@@ -21,7 +21,4 @@ void remove_event();
 
 void dispatch_event();
 
-
-
-
-#endif //SERVER_BASE_C_DEFAULT_SELECTOR_H
+#endif //SERVER_BASE_C_SELECTOR_DEFAULT_H

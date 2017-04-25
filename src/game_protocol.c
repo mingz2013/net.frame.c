@@ -2,4 +2,4 @@
 // Created by zhaojm on 25/04/2017.
 //
 
-#include "protobuf.h"
+#include "game_protocol.h"
