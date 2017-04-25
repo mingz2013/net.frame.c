@@ -10,7 +10,15 @@ struct selector;
 struct selector *s;
 
 
+void epoll_new();
 
+void epoll_free();
+
+void epoll_add_event();
+
+void epoll_remove_event();
+
+void epoll_dispatch_event();
 
 
 
