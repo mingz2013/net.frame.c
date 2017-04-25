@@ -4,7 +4,7 @@ project(server_base_c)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        src/main.c)
+        src/)
 
 include_directories(src)
 
