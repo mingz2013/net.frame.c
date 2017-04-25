@@ -2,7 +2,7 @@
 // Created by zhaojm on 24/04/2017.
 //
 
-#include <tclDecls.h>
+
 #include "log.h"
 
 static void log_init(enum level_enum level) {
