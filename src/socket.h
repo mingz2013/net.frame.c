@@ -5,24 +5,27 @@
 #ifndef SERVER_BASE_C_SOCKET_H
 #define SERVER_BASE_C_SOCKET_H
 
+#include <stdio.h>
+
+size_t BUFF_LINE = 4096;
+
+int socket_new();
+
+int socket_bind(int socketfd, int port);
+
+int socket_listen(int socketfd);
+
+int socket_connect(int sockfd, char *ip, int port);
+
+int socket_accept(int socketfd);
+
+ssize_t socket_send(int sockfd, const char *msg);
+
+ssize_t socket_recv(int connfd);
+
+int socket_close(int sockfd);
 
 void socket_nonblocking();
-
-void socket_close();
-
-void socket_connect();
-
-void socket_accept();
-
-void socket_listen();
-
-void socket_open();
-
-void socket_send();
-
-void socket_bind();
-
-void socket_new();
 
 void socket_free();
 
