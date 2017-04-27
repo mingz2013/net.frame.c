@@ -5,11 +5,11 @@
 #ifndef SERVER_BASE_C_BUFFER_H
 #define SERVER_BASE_C_BUFFER_H
 
-struct Buffer {
+#include <stdio.h>
 
-};
+int buffer_recv(int sockfd, char *buf, size_t count);
 
-static struct Buffer *buffer_new();
+int buffer_send();
 
 
 #endif //SERVER_BASE_C_BUFFER_H

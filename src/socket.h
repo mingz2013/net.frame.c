@@ -21,7 +21,10 @@ int socket_accept(int socketfd);
 
 ssize_t socket_send(int sockfd, const char *msg);
 
-ssize_t socket_recv(int connfd);
+ssize_t socket_recv(int connfd, char *buff);
+
+int socket_read(int connfd, char *buf, size_t count);
+
 
 int socket_close(int sockfd);
 

@@ -49,6 +49,16 @@ ssize_t socket_recv(int connfd, char *buff) {
     return n;
 }
 
+int socket_read(int connfd, char *buf, size_t count) {
+    size_t bytes_read = 0;
+    int this_read;
+    while (bytes_read < count) {
+        do {
+            this_read = read(connfd, buf, count - bytes_read);
+        } while ()
+    }
+}
+
 int socket_close(int sockfd) {
     int ret = close(sockfd);
     return ret;
