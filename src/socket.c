@@ -15,6 +15,7 @@
 #include <stddef.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+#include <fcntl.h>
 
 
 int socket_new() {
@@ -73,3 +74,6 @@ int socket_connect(int sockfd, char *ip, int port) {
 }
 
 
+void socket_nonblocking(int connfd) {
+    fcntl(connfd, F_SETFL, O_NONBLOCK);
+}

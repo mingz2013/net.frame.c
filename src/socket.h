@@ -26,7 +26,7 @@ ssize_t socket_recv(int connfd, char *buff);
 
 int socket_close(int sockfd);
 
-void socket_nonblocking();
+void socket_nonblocking(int connfd);
 
 void socket_free();
 
