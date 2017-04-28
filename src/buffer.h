@@ -7,9 +7,10 @@
 
 #include <stdio.h>
 
-int buffer_recv(int sockfd, char *buf, size_t count);
+ssize_t buffer_read(int connfd, char *buf, size_t count);
 
-int buffer_send();
+ssize_t buffer_send(int connfd, char *buf, size_t len);
+
 
 
 #endif //SERVER_BASE_C_BUFFER_H

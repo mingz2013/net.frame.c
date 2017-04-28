@@ -49,14 +49,10 @@ ssize_t socket_recv(int connfd, char *buff) {
     return n;
 }
 
-int socket_read(int connfd, char *buf, size_t count) {
-    size_t bytes_read = 0;
-    int this_read;
-    while (bytes_read < count) {
-        do {
-            this_read = read(connfd, buf, count - bytes_read);
-        } while ()
-    }
+
+ssize_t socket_send(int sockfd, const char *msg) {
+    ssize_t n = send(sockfd, msg, strlen(msg), 0);
+    return n;
 }
 
 int socket_close(int sockfd) {
@@ -76,7 +72,4 @@ int socket_connect(int sockfd, char *ip, int port) {
     return 0;
 }
 
-ssize_t socket_send(int sockfd, const char *msg) {
-    ssize_t n = send(sockfd, msg, strlen(msg), 0);
-    return n;
-}
+
